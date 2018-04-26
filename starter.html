@@ -5,33 +5,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>TinoCRM - UNI-BH</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
-  <!-- Theme style --> 
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-        page. However, you can choose any other skin. Make sure you
-        apply the skin class to the body tag so the changes take effect. -->
-  <link rel="stylesheet" href="dist/css/skins/skin-purple-light.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TinoCRM - UNI-BH</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- Google Font -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style --> 
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="dist/css/skins/skin-purple-light.min.css">
+  
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -62,7 +65,7 @@ desired effect
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>CR</b>M</span>
+      <span class="logo-mini"><b>C</b>RM</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>TINO</b>crm</span>
     </a>
@@ -80,7 +83,8 @@ desired effect
           
           <!-- /.messages-menu -->
 
-         
+          <!-- Notifications Menu -->
+          
           <!-- Tasks Menu -->
           
           <!-- User Account Menu -->
@@ -96,21 +100,21 @@ desired effect
               <!-- The user image in the menu -->
               <li class="user-header">
                 <img src="dist/img/tinoperfil.png" class="img-circle" alt="User Image">
-
+                
                 <p>
                   Tino da Silva - Mestre Fundador
-                  <small>Membro desde 2018</small>
+                  <small>Member desde 2018</small>
                 </p>
               </li>
-              
+
               
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sair</a>
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -132,12 +136,10 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/tinoperfil.png" class="img-circle" alt="User Image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-
-          <!--DADOS DO -->
-          <p>Tino da Silva </p>
+          <p>Alexander Pierce</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -146,9 +148,9 @@ desired effect
       <!-- search form (Optional) -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Pesquisar...">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
           <span class="input-group-btn">
-              <button type="submit" name="Pesquisar" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
               </button>
             </span>
         </div>
@@ -157,10 +159,21 @@ desired effect
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Chamados</li>
+        <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Feed</span></a></li>
-       
+        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#">Link in level 2</a></li>
+          </ul>
+        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -172,238 +185,80 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Feed CM1 Cristiano Machado
-        <small>Infraestrutura</small>
+        Page Header
+        <small>Optional description</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i>Nivel</a></li>
-        <li class="active">Aqui</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
       </ol>
     </section>
-
-    <!-- Main content -->
-    <div class="col-sm-4" style="margin-top: 1%;">
-      <div class="info-box bg-green">
-        <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
-        <div class="info-box-content">
-          <span class="info-box-text">Bookmarks</span>
-          <span class="info-box-number">22,114</span>
-          <!-- The progress section is optional -->
-          <div class="progress">
-            <div class="progress-bar" style="width: 20%"></div>
-          </div>
-          <span class="progress-description">
-            20% Increase in 30 Days
-          </span>
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-    </div>
-    <div class="col-sm-4" style="margin-top: 1%;">
-        <div class="info-box bg-yellow">
-          <span class="info-box-icon"><i class="fa fa-thumbs-o-up"></i></span>
-          <div class="info-box-content">
-            <span class="info-box-text">Likes</span>
-            <span class="info-box-number">36,621</span>
-            <!-- The progress section is optional -->
-            <div class="progress">
-              <div class="progress-bar" style="width: 45%"></div>
-            </div>
-            <span class="progress-description">
-              45% Increase in 30 Days
-            </span>
-          </div>
-          <!-- /.info-box-content -->
-        </div>
-      </div>
-      <div class="col-sm-4" style="margin-top: 1%;">
-          <div class="info-box bg-red">
-            <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
-            <div class="info-box-content">
-              <span class="info-box-text">Comments</span>
-              <span class="info-box-number">41,410</span>
-              <!-- The progress section is optional -->
-              <div class="progress">
-                <div class="progress-bar" style="width: 70%"></div>
-              </div>
-              <span class="progress-description">
-                70% Increase in 30 Days
-              </span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-        </div>
+<!-- Main content -->
     <section class="content container-fluid">
-      <div class="box" style="margin-top: 10%;">
-        <div class="box-header with-border bg-green">
-          <h3 class="box-title" style="color: #fff !important">Teste Box</h3>
-          <div class="box-tools pull-right">
-            <!-- Buttons, labels, and many other things can be placed here! -->
-            <!-- Here is a label for example -->
-            <span class="label label-primary">Label</span>
-          </div>
-          <!-- /.box-tools -->
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          The body of the box
-        </div>
-        <!-- /.box-body -->
-        <div class="box-footer">
-          The footer of the box
-        </div>
-      <!--------------------------
-        | Your Page Content Here 
+<!--------------------------
+        | Your Page Content Here |
         -------------------------->
+        <div class="card col-xs-2 col-sm-10">
+          <div class= "box box-default collapsed-box"  >
+            <div class="box-header with-border bg-green">
+              <h3 class="box-title" style="color = #ffffff">Vazamento de Torneira - Em Aberto</h3>
+                <div class="box-tools pull-right">
+                  <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                    </div><!-- /.box-tools -->
+                      </div><!-- /.box-header -->
+                        <div class="box-body" >
+                               Vazamento no Banheiro Masculino do 2º andar. 
+                        </div><!-- /.box-body -->
+                        <div class="box-footer">
+                          <button type="button" class="btn btn-success">Comentar</button>
+                          <button type="button" class="btn btn-success">Mudar Status</button>
+                        </div>
+                    </div>
+                    <div class= "box box-default collapsed-box"  >
+                      <div class="box-header with-border bg-green">
+                        <h3 class="box-title" style="color = #ffffff">Vazamento de Torneira</h3>
+                          <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                              </div><!-- /.box-tools -->
+                                </div><!-- /.box-header -->
+                                  <div class="box-body" >
+                                         Vazamento no Banheiro Masculino do 2º andar. 
+                                  </div><!-- /.box-body -->
+                                  <div class="box-footer">
+                                    <button type="button" class="btn btn-success">Comentar</button>
+                                    <button type="button" class="btn btn-success">Mudar Status</button>
+                                  </div>
+                              </div>
+                              <div class= "box box-default collapsed-box"  >
+                                <div class="box-header with-border bg-green">
+                                  <h3 class="box-title" style="color = #ffffff">Vazamento de Torneira</h3>
+                                    <div class="box-tools pull-right">
+                                      <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                                        </div><!-- /.box-tools -->
+                                          </div><!-- /.box-header -->
+                                            <div class="box-body" >
+                                                   Vazamento no Banheiro Masculino do 2º andar. 
+                                            </div><!-- /.box-body -->
+                                            <div class="box-footer">
+                                              <button type="button" class="btn btn-success">Comentar</button>
+                                              <button type="button" class="btn btn-success">Mudar Status</button>
+                                            </div>
+                                        </div>
 
-        
-
-
-
-        <!-- DONUT CHART -->
-        <div class="box box-danger box grafico margin-top: 20px;">
-            <div class="box-header with-border">
-              <h3 class="box-title">Donut Chart</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <canvas id="pieChart" style="height:250px"></canvas>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-        </div>
-        <!-- /.col (LEFT) -->
-        <div class="col-md-6">
-
-          <!-- ./wrapper -->
-
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- ChartJS -->
-<script src="../../bower_components/chart.js/Chart.js"></script>
-<!-- FastClick -->
-<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<!-- page script -->
-<script>
-  $(function () {
-     //-------------
-    //- PIE CHART -
-    //-------------
-    // Get context with jQuery - using jQuery's .get() method.
-    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-    var pieChart       = new Chart(pieChartCanvas)
-    var PieData        = [
-      {
-        value    : 700,
-        color    : '#f56954',
-        highlight: '#f56954',
-        label    : 'Chrome'
-      },
-      {
-        value    : 500,
-        color    : '#00a65a',
-        highlight: '#00a65a',
-        label    : 'IE'
-      },
-      {
-        value    : 400,
-        color    : '#f39c12',
-        highlight: '#f39c12',
-        label    : 'FireFox'
-      },
-      {
-        value    : 600,
-        color    : '#00c0ef',
-        highlight: '#00c0ef',
-        label    : 'Safari'
-      },
-      {
-        value    : 300,
-        color    : '#3c8dbc',
-        highlight: '#3c8dbc',
-        label    : 'Opera'
-      },
-      {
-        value    : 100,
-        color    : '#d2d6de',
-        highlight: '#d2d6de',
-        label    : 'Navigator'
-      }
-    ]
-    var pieOptions     = {
-      //Boolean - Whether we should show a stroke on each segment
-      segmentShowStroke    : true,
-      //String - The colour of each segment stroke
-      segmentStrokeColor   : '#fff',
-      //Number - The width of each segment stroke
-      segmentStrokeWidth   : 2,
-      //Number - The percentage of the chart that we cut out of the middle
-      percentageInnerCutout: 50, // This is 0 for Pie charts
-      //Number - Amount of animation steps
-      animationSteps       : 100,
-      //String - Animation easing effect
-      animationEasing      : 'easeOutBounce',
-      //Boolean - Whether we animate the rotation of the Doughnut
-      animateRotate        : true,
-      //Boolean - Whether we animate scaling the Doughnut from the centre
-      animateScale         : false,
-      //Boolean - whether to make the chart responsive to window resizing
-      responsive           : true,
-      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-      maintainAspectRatio  : true,
-      //String - A legend template
-      legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-    }
-    //Create pie or douhnut chart
-    // You can switch between pie and douhnut using the method below.
-    pieChart.Doughnut(PieData, pieOptions)
-
-      })
-</script>
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </section>
+                </div>
+        </section>
     <!-- /.content -->
-  </div>
+</div>
   <!-- /.content-wrapper -->
 
   <!-- Main Footer -->
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      
+      Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
