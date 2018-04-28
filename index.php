@@ -322,56 +322,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <th>Status</th>
                   </tr>
                   </thead>
-                  <tbody>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">12345</a></td>
-                    <td>Carteira quebrada</td>
-                    <td>Sala 123</td>
-                    <td><span class="label label-info">Em andamento</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">54321</a></td>
-                    <td>Projetor estragado</td>
-                    <td>Sala 321</td>
-                    <td><span class="label label-warning">Pendente</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">66666</a></td>
-                    <td>Mesa quebrada</td>
-                    <td>Biblioteca</td>
-                    <td><span class="label label-success">Concluído</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">45512</a></td>
-                    <td>Parede rabiscada</td>
-                    <td>Sala 111</td>
-                    <td><span class="label label-warning">Pendente</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">53321</a></td>
-                    <td>Lâmpada queimada</td>
-                    <td>DCE</td>
-                    <td><span class="label label-info">Em andamento</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">86652</a></td>
-                    <td>Computador não liga</td>
-                    <td>Sala 103</td>
-                    <td><span class="label label-danger">Cancelado</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">41125</a></td>
-                    <td>Descarga não funciona</td>
-                    <td>Banheiro feminino</td>
-                    <td><span class="label label-success">Concluído</span></td>
-    
-                  </tr>
+                  <tbody id="table-chamados-tino">
+                  
                   </tbody>
                 </table>
               </div>
@@ -607,5 +559,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <script src="dist/js/tino.js"></script>
+<script src="dist/js/ajax.js"></script>
 </body>
 </html>
