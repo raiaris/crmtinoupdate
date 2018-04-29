@@ -271,7 +271,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>9</h3>
+              <h3 id="novosChamados"></h3>
 
               <p>Novos chamados registrados</p>
             </div>

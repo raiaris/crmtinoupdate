@@ -7,6 +7,7 @@ $(document).ready(function(){
 		dataType: 'json',	//Definimos o tipo de retorno
 		url: 'dist/php/getDadosTableChamados.php',//Definindo o arquivo onde serão buscados os dados
 		success: function(dados){
+            j = dados.length;
 			for(var i = 0; dados.length > i; i++){
                 j++;
                 if(dados[i].vr_nivel_prioridade == 1) {
@@ -29,6 +30,7 @@ $(document).ready(function(){
             }
             $('#descChamado').append(dados[4].ds_situacao);
             $('#tituloChamado').append("Detalhes - " + dados[4].ds_obs_chamado + " #" + dados[4])
+            $('#novosChamados').append(j);
         }
     });
 });
