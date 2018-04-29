@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    var modalProtocolo = 0;
+    var j = 0;
 	$('#table-chamados-tino').empty(); //Limpando a tabela
 	$.ajax({
 		type:'post',		//Definimos o método HTTP usado
@@ -6,6 +8,7 @@ $(document).ready(function(){
 		url: 'dist/php/getDadosTableChamados.php',//Definindo o arquivo onde serão buscados os dados
 		success: function(dados){
 			for(var i = 0; dados.length > i; i++){
+                j++;
                 if(dados[i].vr_nivel_prioridade == 1) {
                     var status = '<span class="label label-warning">Pendente</span>';
                 } else if (dados[i].vr_nivel_prioridade == 2) {
@@ -23,7 +26,10 @@ $(document).ready(function(){
                     '</a></td><td>'+dados[i].ds_obs_chamado+
                     '</td><td>'+dados[i].ds_local+
                     '</td><td>'+status+'</td></tr>');
-			}
-		}
-	});
+            }
+            $('#descChamado').append(dados[4].ds_situacao);
+            $('#tituloChamado').append("Detalhes - " + dados[4].ds_obs_chamado + " #" + dados[4])
+        }
+    });
 });
+

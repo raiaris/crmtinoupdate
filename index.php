@@ -476,18 +476,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span></button>
-        <h4 class="modal-title">Detalhes - Chamado #12345 <span class="label label-info pull-right" 
+        <h4 class="modal-title" id="tituloChamado"><span class="label label-info pull-right" 
           style="margin-right: 4%;" data-toggle="tooltip" data-placement="bottom" 
           title="Clique para alterar status">Em andamento</span></h4>
         <p>Responsável: João da Silva</p>
       </div>
       <div class="modal-body">
         <h4>Descrição:</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor dictum massa. 
-          Sed sodales fringilla metus, id gravida odio semper eget. Suspendisse condimentum 
-          purus id purus pellentesque, vestibulum faucibus felis congue. Ut congue convallis 
-          viverra. In tincidunt ultricies justo, ac cursus arcu lobortis nec. Sed ac ipsum a 
-          felis sollicitudin feugiat.</p>
+        <p id="descChamado"></p>
         <p><i class="fa fa-arrow-up"></i> 123</p>
         <div class="comentarios">
           <div class="direct-chat-msg">
