@@ -1,37 +1,39 @@
 $(document).ready(function(){
     var modalProtocolo = 0;
     var j = 0;
-	$('#table-chamados-tino').empty(); //Limpando a tabela
+	$('#table-chamados-tino').empty();
 	$.ajax({
-		type:'post',		//Definimos o método HTTP usado
-		dataType: 'json',	//Definimos o tipo de retorno
-		url: 'dist/php/getDadosTableChamados.php',//Definindo o arquivo onde serão buscados os dados
+		type:'post',
+		dataType: 'json',
+		url: 'dist/php/getDadosTableChamados.php',
 		success: function(dados){
             j = dados.length;
-			for(var i = 0; dados.length > i; i++){
+			for(var i = 0; i < dados.length; i++){
                 j++;
-                if(dados[i].vr_nivel_prioridade == 1) {
+                if(dados[i].status_chamado == 1)
                     var status = '<span class="label label-warning">Pendente</span>';
-                } else if (dados[i].vr_nivel_prioridade == 2) {
+                else if (dados[i].status_chamado == 2)
                     var status = '<span class="label label-info">Em andamento</span>';
-                } else if (dados[i].vr_nivel_prioridade == 3) {
+                else if (dados[i].status_chamado == 3)
                     var status = '<span class="label label-success">Concluido</span>';
-                } else if (dados[i].vr_nivel_prioridade == 4) {
+                else if (dados[i].status_chamado == 4)
                     var status = '<span class="label label-danger">Cancelado</span>';
-                } else {
+                else
                     var status = '<span class="label">Não disponivel</span>';
-                }
-				//Adicionando registros retornados na tabela
 				$('#table-chamados-tino').append(
-                    '<tr><td><a href="" data-toggle="modal" data-target="#modal-detalhes">'+dados[i].nr_protocolo+
+                    '<tr><td><a href="" id="abrirModal" data-toggle="modal" data-target="#modal-detalhes">'
+                    + dados[i].nr_protocolo+
                     '</a></td><td>'+dados[i].ds_obs_chamado+
                     '</td><td>'+dados[i].ds_local+
-                    '</td><td>'+status+'</td></tr>');
+                    '</td><td>'+status+'</td></tr>');    
             }
+<<<<<<< HEAD
             $('#descChamado').append(dados[i].ds_situacao);
             $('#tituloChamado').append("Detalhes - " + dados[i].ds_obs_chamado + " #" + dados[4])
             $('#novosChamados').append(j);
+=======
+            $('#novosChamados').append(j/2);
+>>>>>>> ba847b24fa181fcee5c002525b19d8794a9194af
         }
     });
 });
-
