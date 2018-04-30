@@ -28,8 +28,8 @@ $(document).ready(function(){
                     '</td><td>'+dados[i].ds_local+
                     '</td><td>'+status+'</td></tr>');
             }
-            $('#descChamado').append(dados[4].ds_situacao);
-            $('#tituloChamado').append("Detalhes - " + dados[4].ds_obs_chamado + " #" + dados[4])
+            $('#descChamado').append(dados[i].ds_situacao);
+            $('#tituloChamado').append("Detalhes - " + dados[i].ds_obs_chamado + " #" + dados[4])
             $('#novosChamados').append(j);
         }
     });

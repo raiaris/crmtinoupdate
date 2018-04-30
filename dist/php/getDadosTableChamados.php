@@ -1,6 +1,6 @@
 <?php
     //Conectando ao banco de dados
-    $con = new mysqli("localhost", "root", "root", "tinodb");
+    $con = new mysqli("127.0.0.1:3306", "root", "", "tino");
     if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
     
     //Consultando banco de dados

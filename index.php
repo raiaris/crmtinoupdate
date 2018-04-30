@@ -516,6 +516,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div>
                 <textarea type="text" name="message" placeholder="Inserir comentário ..." class="form-control"></textarea>
               </div>
+              
+              <div class="custom-select" style="width:200px;">
+                <label>Status</label>
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">Aberto</option>
+                  <option>Em andamento(tercerizado)</option>
+                  <option>Em andamento</option>
+                  <option>Aguardando aluno</option>
+                  <option>Fechado</option> 
+                </select>
+               </div>
+
+</div>
+
             </form>
         </div>
       </div>
