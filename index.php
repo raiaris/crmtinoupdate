@@ -271,7 +271,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>9</h3>
+              <h3 id="novosChamados">5</h3>
 
               <p>Novos chamados registrados</p>
             </div>
@@ -322,56 +322,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <th>Status</th>
                   </tr>
                   </thead>
-                  <tbody>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">12345</a></td>
-                    <td>Carteira quebrada</td>
-                    <td>Sala 123</td>
-                    <td><span class="label label-info">Em andamento</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">54321</a></td>
-                    <td>Projetor estragado</td>
-                    <td>Sala 321</td>
-                    <td><span class="label label-warning">Pendente</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">66666</a></td>
-                    <td>Mesa quebrada</td>
-                    <td>Biblioteca</td>
-                    <td><span class="label label-success">Concluído</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">45512</a></td>
-                    <td>Parede rabiscada</td>
-                    <td>Sala 111</td>
-                    <td><span class="label label-warning">Pendente</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">53321</a></td>
-                    <td>Lâmpada queimada</td>
-                    <td>DCE</td>
-                    <td><span class="label label-info">Em andamento</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">86652</a></td>
-                    <td>Computador não liga</td>
-                    <td>Sala 103</td>
-                    <td><span class="label label-danger">Cancelado</span></td>
-    
-                  </tr>
-                  <tr>
-                    <td><a href="" data-toggle="modal" data-target="#modal-detalhes">41125</a></td>
-                    <td>Descarga não funciona</td>
-                    <td>Banheiro feminino</td>
-                    <td><span class="label label-success">Concluído</span></td>
-    
-                  </tr>
+                  <tbody id="table-chamados-tino">
+                  
                   </tbody>
                 </table>
               </div>
@@ -524,18 +476,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span></button>
-        <h4 class="modal-title">Detalhes - Chamado #12345 <span class="label label-info pull-right" 
-          style="margin-right: 4%;" data-toggle="tooltip" data-placement="bottom" 
-          title="Clique para alterar status">Em andamento</span></h4>
-        <p>Responsável: João da Silva</p>
+        <h4 class="modal-title" id="tituloChamado"></h4>#<span id="protocoloChamado"></span>
+          <div id="statusModal" class="pull-right"
+          style="margin-right: 4%; margin-top: -4%;"></div><p>Responsável: João da Silva</p>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="padding-top: 0 !important; padding-left: 4%">
         <h4>Descrição:</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor dictum massa. 
-          Sed sodales fringilla metus, id gravida odio semper eget. Suspendisse condimentum 
-          purus id purus pellentesque, vestibulum faucibus felis congue. Ut congue convallis 
-          viverra. In tincidunt ultricies justo, ac cursus arcu lobortis nec. Sed ac ipsum a 
-          felis sollicitudin feugiat.</p>
+        <p id="descChamado"></p>
         <p><i class="fa fa-arrow-up"></i> 123</p>
         <div class="comentarios">
           <div class="direct-chat-msg">
@@ -566,7 +513,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
             <form action="#" method="post">
               <div>
-                <textarea type="text" name="message" placeholder="Inserir comentário ..." class="form-control"></textarea>
+                <textarea type="text" name="message" placeholder="Inserir comentário..." class="form-control"></textarea>
+              </div>
+              <br/>
+              <div class="custom-select" >
+                <label>Status</label>
+                <select class="form-control select2" id="selectStatus" style="width: 50%;">
+                  <option selected="selected">Selecione</option>
+                  <option value="1">Aberto</option>
+                  <option value="2">Em andamento</option>
+                  <option value="3">Em andamento (tercerizado)</option>
+                  <option value="4">Aguardando aluno</option>
+                  <option value="5">Fechado</option> 
+                </select>
+                <input type="button" style="margin-top: -7%;" class="btn btn-default pull-right" value="Alterar e Concluir">
               </div>
             </form>
         </div>
@@ -584,7 +544,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
@@ -602,10 +562,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="bower_components/chart.js/Chart.js"></script>
 <script src="bower_components/chart.js/Chart.min.js"></script>
 <script src="bower_components/chart.js/src/Chart.Doughnut.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard2.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
 <script src="dist/js/tino.js"></script>
+<script src="dist/js/ajax.js"></script>
 </body>
 </html>
