@@ -567,6 +567,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/tino.js"></script>
 <script src="dist/js/inserir_registo.js"></script>
-
+<!-- <script src="dist/js/ajax.js"></script> -->
 </body>
 </html>
