@@ -387,10 +387,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Anything you want
+      
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2018 <a href="#">Tino</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->
@@ -479,7 +479,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <h4 class="modal-title" id="tituloChamado"></h4>#<span id="protocoloChamado"></span>
           <div id="statusModal" class="pull-right"
           style="margin-right: 4%; margin-top: -4%;"></div><p>Responsável: João da Silva</p>
+          
       </div>
+      
       <div class="modal-body" style="padding-top: 0 !important; padding-left: 4%">
         <h4>Descrição:</h4>
         <p id="descChamado"></p>
@@ -526,7 +528,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <option value="4">Aguardando aluno</option>
                   <option value="5">Fechado</option> 
                 </select>
-                <input type="button" style="margin-top: -7%;" class="btn btn-default pull-right" value="Alterar e Concluir">
+                <input type="button" style="margin-top: -7%;" class="btn btn-success pull-right" onclick="inserir_registo()" value="Alterar e Concluir">
               </div>
             </form>
         </div>
@@ -565,5 +567,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/tino.js"></script>
 <script src="dist/js/ajax.js"></script>
+
 </body>
 </html>

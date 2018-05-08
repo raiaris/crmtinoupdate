@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$.ajax({
 		type:'post', //define o tipo de chamada
 		dataType: 'json', //define o tipo de dado
-		url: 'http://167.99.230.10/api/chamados', //chama o arquivo de consulta com o bd
+		url: 'dist/php/getDadosTableChamados.php', //chama o arquivo de consulta com o bd
 		success: function(dados){
             j = dados.length;
 			for(var i = 0; i < dados.length; i++){
@@ -23,7 +23,7 @@ $(document).ready(function(){
                 //.append para preencher a tabela
 				$('#table-chamados-tino').append(
                     '<tr><td><a href="" onClick="setDadosModal('+dados[i].status_chamado+','+dados[i].nr_protocolo+',\''
-                    + dados[i].ds_obs_chamado + '\', \'' + dados[i].ds_situacao + '\',\''+dados[i].ds_local+');" data-toggle="modal" data-target="#modal-detalhes">'
+                    + dados[i].ds_obs_chamado + '\', \'' + dados[i].ds_situacao + '\');" data-toggle="modal" data-target="#modal-detalhes">'
                     + dados[i].nr_protocolo+'</a></td><td>'+dados[i].ds_obs_chamado+
                     '</td><td>'+dados[i].ds_local+
                     '</td><td>'+status+'</td></tr>');   
@@ -32,18 +32,17 @@ $(document).ready(function(){
 });
 
 //função para preenchimento do modal
-function setDadosModal(status, protocolo,titulo,observacao,local){
+function setDadosModal(status, protocolo,titulo,observacao){
     //clean da área a ser preenchida
     $('#statusModal').empty();
     $('#descChamado').empty();
     $("#tituloChamado").empty();
     $("#protocoloChamado").empty();
-    $("#ds_local").empty();
     //preenchimento da área no html
     $("#descChamado").append(observacao);
     $("#tituloChamado").append(titulo);
     $("#protocoloChamado").append(protocolo);
-    $("#localChamado").append(local);
+
     //define o status exibido no modal
     if(status == 1)
         $("#statusModal").append('<span class="label label-warning">Pendente</span>');
@@ -56,9 +55,5 @@ function setDadosModal(status, protocolo,titulo,observacao,local){
     else if (status == 5)
         $("#statusModal").append('<span class="label label-danger">Cancelado</span>');
     else
-        $("#statusModal").append('<span class="label">Não disponivel</span>');
-        
-     
+        $("#statusModal").append('<span class="label">Não disponivel</span>');    
 }
-
-
