@@ -485,7 +485,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="modal-body" style="padding-top: 0 !important; padding-left: 4%">
         <h4>Descrição:</h4>
         <p id="descChamado"></p>
-        <p><i class="fa fa-arrow-up"></i> 123</p>
+        <p><i class="fa fa-arrow-up"></i><strong id="upvotes"></strong></p>
         <div class="comentarios">
           <div class="direct-chat-msg">
             <div class="direct-chat-info clearfix">
@@ -566,7 +566,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="bower_components/chart.js/src/Chart.Doughnut.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/tino.js"></script>
-<script src="dist/js/ajax.js"></script>
+<script src="dist/js/inserir_registo.js"></script>
 
 </body>
 </html>
