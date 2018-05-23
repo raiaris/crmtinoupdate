@@ -1,39 +1,32 @@
-$(document).ready(function(){
-    var modalProtocolo = 0;
-    var j = 0;
-	$('#table-chamados-tino').empty();
-	$.ajax({
-		type:'post',
-		dataType: 'json',
-		url: 'dist/php/getDadosTableChamados.php',
-		success: function(dados){
-            j = dados.length;
-			for(var i = 0; i < dados.length; i++){
-                j++;
-                if(dados[i].status_chamado == 1)
-                    var status = '<span class="label label-warning">Pendente</span>';
-                else if (dados[i].status_chamado == 2)
-                    var status = '<span class="label label-info">Em andamento</span>';
-                else if (dados[i].status_chamado == 3)
-                    var status = '<span class="label label-success">Concluido</span>';
-                else if (dados[i].status_chamado == 4)
-                    var status = '<span class="label label-danger">Cancelado</span>';
-                else
-                    var status = '<span class="label">Não disponivel</span>';
-				$('#table-chamados-tino').append(
-                    '<tr><td><a href="" id="abrirModal" data-toggle="modal" data-target="#modal-detalhes">'
-                    + dados[i].nr_protocolo+
-                    '</a></td><td>'+dados[i].ds_obs_chamado+
-                    '</td><td>'+dados[i].ds_local+
-                    '</td><td>'+status+'</td></tr>');    
-            }
-<<<<<<< HEAD
-            $('#descChamado').append(dados[i].ds_situacao);
-            $('#tituloChamado').append("Detalhes - " + dados[i].ds_obs_chamado + " #" + dados[4])
-            $('#novosChamados').append(j);
-=======
-            $('#novosChamados').append(j/2);
->>>>>>> ba847b24fa181fcee5c002525b19d8794a9194af
+$(document).ready(function() {
+    let array = [];
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200) {
+            array = JSON.parse(this.response);
+            console.log(array);
+            ListarChamados(array);
         }
-    });
+    };
+
+    xhttp.open("GET", "http://167.99.230.10/api/chamados", true);
+    xhttp.send();
+    
 });
+
+function ListarChamados(array) {
+    for(let i = 0; i < Object.keys(array).length; i++) {
+        $('#table-chamados-tino').append(
+            '<tr><td><a href="" onClick="setDadosModal('+array.data[i].qt_upvotes+','+array.data[i].nr_protocolo+',\''
+            + array.data[i].ds_obs_chamado + '\',\'' +array.data[i].id_motivo_chamado+ '\', \'' + array.data[i].ds_situacao + '\');" data-toggle="modal" data-target="#modal-detalhes">'
+            + array.data[i].nr_protocolo+'</a></td><td>'+array.data[i].id_motivo_chamado+
+            '</td><td>'+array.data[i].id_local+
+            '</td><td>'+array.data[i].ds_situacao+'</td></tr>');   
+    } 
+}
+
+function setDadosModal(upvotes, protocolo, desc, motivo, status) {
+    $('#descChamado').append().empty();
+    $('#descChamado').append(motivo);
+}

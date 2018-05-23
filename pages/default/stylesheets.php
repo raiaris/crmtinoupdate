@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="dist/css/AdminLTE.css">
+<link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+<link rel="stylesheet" href="dist/css/skins/skin-purple-light.css">
+<link rel="stylesheet" href="dist/css/skins/skin-purple.css">
+<link rel="stylesheet" href="dist/css/custom-style.css">
+<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
