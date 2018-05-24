@@ -27,6 +27,30 @@ function ListarChamados(array) {
 }
 
 function setDadosModal(upvotes, protocolo, desc, motivo, status) {
+
+    var s = "";
+
+    if (status == "Em andamento") {
+        s = '<span class="label label-info">Em andamento</span>';
+    } else if (status == "Aberto") {
+        s = '<span class="label label-warning">Aberto</span>';
+    } else if (status == "Cancelado") {
+        s = '<span class="label label-danger">Cancelado</span>';
+    }
+
     $('#descChamado').append().empty();
-    $('#descChamado').append(motivo);
+    $('#descChamado').append(protocolo);
+
+    $('#upvotesChamado').append().empty();
+    $('#upvotesChamado').append(upvotes);
+
+    $('#tituloChamado').append().empty();
+    $('#tituloChamado').append(motivo);
+
+    $('#descChamado').append().empty();
+    $('#descChamado').append(desc);
+
+    $('#statusChamado').append().empty();
+    $('#statusChamado').append(s);
+    
 }

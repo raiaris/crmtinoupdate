@@ -4,15 +4,14 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span></button>
-        <h4 class="modal-title" id="tituloChamado"><span class="label label-info pull-right" 
-          style="margin-right: 4%;" data-toggle="tooltip" data-placement="bottom" 
-          title="Clique para alterar status">Em andamento</span></h4>
+        <h4 class="modal-title" id="tituloChamado"></h4>
+        <span class="pull-right" id="statusChamado"></span>
         <p>Responsável: João da Silva</p>
       </div>
       <div class="modal-body">
         <h4>Descrição:</h4>
         <p id="descChamado"></p>
-        <p><i class="fa fa-arrow-up"></i> 123</p>
+        <i class="fa fa-arrow-up"> <span id="upvotesChamado"></span></i>
         <div class="comentarios">
           <div class="direct-chat-msg">
             <div class="direct-chat-info clearfix">
@@ -49,7 +48,7 @@
                   <option value="4">Aguardando aluno</option>
                   <option value="5">Fechado</option> 
                 </select>
-                <input type="button" style="margin-top: -7%;" class="btn btn-default pull-right" value="Alterar e Concluir">
+                <input id="statusButton" type="button" style="margin-top: -7%;" class="btn btn-default pull-right" value="Alterar e Concluir">
               </div>
           </form>
         </div>
