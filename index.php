@@ -45,7 +45,7 @@
             <div class="col-lg-4 col-xs-6">
               <div class="small-box bg-red">
                 <div class="inner">
-                  <h3 id="novosChamados"></h3>
+                  <h3 id="novosChamados">3</h3>
 
                   <p>Novos chamados registrados</p>
                 </div>
